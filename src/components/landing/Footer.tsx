@@ -21,6 +21,7 @@ export function Footer() {
                     src={logoImage.imageUrl}
                     alt="DS Despachante Logo"
                     fill
+                    sizes="56px"
                     className="object-contain"
                   />
                 </div>

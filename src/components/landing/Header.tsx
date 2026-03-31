@@ -34,6 +34,7 @@ export function Header() {
                     src={logoImage.imageUrl}
                     alt="DS Despachante Logo"
                     fill
+                    sizes="(max-width: 768px) 48px, 56px"
                     className="object-contain"
                     priority
                   />
@@ -76,7 +77,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="xl:hidden border-t bg-background p-6 flex flex-col gap-6 animate-in slide-in-from-top-4 duration-200">
           {navLinks.map((link) => (

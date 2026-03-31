@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -17,6 +18,7 @@ export function About() {
                   src={aboutImage.imageUrl}
                   alt={aboutImage.description}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                   data-ai-hint={aboutImage.imageHint}
                 />
