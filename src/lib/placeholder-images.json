@@ -2,19 +2,19 @@
   "placeholderImages": [
     {
       "id": "logo-ds",
-      "description": "Logotipo Oficial DS Despachante Guarujá",
+      "description": "Logotipo Oficial - Coloque seu arquivo como 'logo.png' na pasta public/images/",
       "imageUrl": "/images/logo.png",
       "imageHint": "logo"
     },
     {
       "id": "hero-bg",
-      "description": "Imagem de fundo do Hero",
+      "description": "Fundo do Topo (Hero) - Coloque seu arquivo como 'hero.jpg' na pasta public/images/",
       "imageUrl": "/images/hero.jpg",
       "imageHint": "car"
     },
     {
       "id": "about-img",
-      "description": "Imagem da seção Sobre",
+      "description": "Foto da Empresa - Coloque seu arquivo como 'about.jpg' na pasta public/images/",
       "imageUrl": "/images/about.jpg",
       "imageHint": "office"
     }

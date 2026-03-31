@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from 'react';
@@ -35,7 +34,7 @@ export function Header() {
                     src={logoImage.imageUrl}
                     alt="DS Despachante Logo"
                     fill
-                    sizes="(max-width: 768px) 40px, 48px"
+                    sizes="48px"
                     className="object-contain"
                     priority
                   />
@@ -43,7 +42,7 @@ export function Header() {
               )}
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
-                  DS <span className="text-primary uppercase block text-[8px] md:text-[10px] tracking-[0.2em] font-black">Despachante</span>
+                  DS<span className="text-primary uppercase block text-[8px] md:text-[10px] tracking-[0.2em] font-black">Despachante</span>
                 </span>
               </div>
             </Link>

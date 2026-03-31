@@ -1,10 +1,9 @@
-
 "use client";
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Instagram, Facebook, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Instagram, Facebook, Clock } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
@@ -35,7 +34,7 @@ export function Footer() {
               )}
               <div className="flex flex-col">
                 <span className="text-2xl font-black tracking-tighter leading-none">
-                  DS <span className="text-primary italic block text-xs tracking-widest not-italic font-black">DESPACHANTE</span>
+                  DS<span className="text-primary italic block text-xs tracking-widest not-italic font-black">DESPACHANTE</span>
                 </span>
               </div>
             </div>
@@ -56,11 +55,12 @@ export function Footer() {
             <h4 className="font-black uppercase tracking-widest text-primary text-xs mb-6 italic">Navegação</h4>
             <ul className="space-y-3 text-zinc-300 font-bold uppercase text-[10px] tracking-widest">
               <li><Link href="#home" className="hover:text-primary transition-colors">Página Inicial</Link></li>
-              <li><Link href="#servicos" className="hover:text-primary transition-colors">Serviços Veiculares</Link></li>
+              <li><Link href="#servicos" className="hover:text-primary transition-colors">Serviços</Link></li>
               <li><Link href="https://dsdespachanteguaruja.com.br" target="_blank" className="hover:text-primary transition-colors">Cursos EAD</Link></li>
               <li><Link href="#diferenciais" className="hover:text-primary transition-colors">Diferenciais</Link></li>
-              <li><Link href="#sobre" className="hover:text-primary transition-colors">Sobre a Empresa</Link></li>
-              <li><Link href="#faq" className="hover:text-primary transition-colors">Dúvidas Frequentes</Link></li>
+              <li><Link href="#sobre" className="hover:text-primary transition-colors">Sobre</Link></li>
+              <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="#contato" className="hover:text-primary transition-colors">Contato</Link></li>
             </ul>
           </div>
 
