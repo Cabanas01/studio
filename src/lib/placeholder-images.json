@@ -2,19 +2,19 @@
   "placeholderImages": [
     {
       "id": "logo-ds",
-      "description": "Logotipo Oficial - Coloque seu arquivo como 'logo.png' na pasta public/images/",
+      "description": "Logotipo Oficial - Salve como 'logo.png' em public/images/",
       "imageUrl": "/images/logo.png",
       "imageHint": "logo"
     },
     {
       "id": "hero-bg",
-      "description": "Fundo do Topo (Hero) - Coloque seu arquivo como 'hero.jpg' na pasta public/images/",
+      "description": "Fundo do Topo (Hero) - Salve como 'hero.jpg' em public/images/",
       "imageUrl": "/images/hero.jpg",
       "imageHint": "car"
     },
     {
       "id": "about-img",
-      "description": "Foto da Empresa - Coloque seu arquivo como 'about.jpg' na pasta public/images/",
+      "description": "Foto da Empresa - Salve como 'about.jpg' em public/images/",
       "imageUrl": "/images/about.jpg",
       "imageHint": "office"
     }

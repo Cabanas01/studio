@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -32,9 +33,9 @@ export function Footer() {
                   />
                 </div>
               )}
-              <div className="flex flex-col">
+              <div className="flex items-baseline">
                 <span className="text-2xl font-black tracking-tighter leading-none">
-                  DS<span className="text-primary italic block text-xs tracking-widest not-italic font-black">DESPACHANTE</span>
+                  DS<span className="text-primary italic ml-0.5 text-xs tracking-widest not-italic font-black">DESPACHANTE</span>
                 </span>
               </div>
             </div>
@@ -98,7 +99,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-zinc-500 font-black uppercase tracking-[0.2em]">
-          <p>© {year ? year : '2024'} DS DESPACHANTE GUARUJÁ. CNPJ: 00.000.000/0001-00</p>
+          <p>© {year ? year : '2025'} DS DESPACHANTE GUARUJÁ. CNPJ: 00.000.000/0001-00</p>
           <div className="flex gap-6 italic">
             <Link href="#" className="hover:text-primary transition-colors">Transparência</Link>
             <Link href="#" className="hover:text-primary transition-colors">LGPD</Link>

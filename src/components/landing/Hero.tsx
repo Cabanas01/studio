@@ -1,4 +1,6 @@
 
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,19 +13,18 @@ export function Hero() {
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
-    <section id="home" className="relative w-full py-16 md:py-32 lg:py-40 overflow-hidden bg-zinc-950">
+    <section id="home" className="relative w-full py-16 md:py-32 lg:py-48 overflow-hidden bg-zinc-950">
       {heroImage && (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
             sizes="100vw"
-            className="object-cover opacity-40 grayscale-[0.5]"
+            className="object-cover opacity-60"
             priority
-            data-ai-hint={heroImage.imageHint}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/60 to-transparent" />
         </div>
       )}
       
@@ -37,7 +38,7 @@ export function Hero() {
             VEICULAR E <br />
             <span className="text-primary italic">CURSOS EAD.</span>
           </h1>
-          <p className="text-lg text-zinc-300 md:text-2xl mb-8 md:mb-12 max-w-2xl font-medium leading-relaxed">
+          <p className="text-lg text-zinc-200 md:text-2xl mb-8 md:mb-12 max-w-2xl font-medium leading-relaxed">
             Eliminamos a burocracia do seu veículo e aceleramos sua carreira com cursos profissionalizantes 100% online.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center">
@@ -47,7 +48,7 @@ export function Hero() {
                 FALAR COM ESPECIALISTA
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-transparent hover:text-primary font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105 bg-transparent">
               <Link href="https://dsdespachanteguaruja.com.br" target="_blank">
                 <GraduationCap className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 VER CURSOS EAD

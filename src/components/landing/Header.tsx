@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -40,9 +41,9 @@ export function Header() {
                   />
                 </div>
               )}
-              <div className="flex flex-col">
+              <div className="flex items-baseline">
                 <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
-                  DS<span className="text-primary uppercase block text-[8px] md:text-[10px] tracking-[0.2em] font-black">Despachante</span>
+                  DS<span className="text-primary uppercase ml-0.5 text-xs md:text-sm tracking-widest font-black">DESPACHANTE</span>
                 </span>
               </div>
             </Link>
