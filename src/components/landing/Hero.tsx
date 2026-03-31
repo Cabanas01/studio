@@ -40,14 +40,14 @@ export function Hero() {
           <p className="text-lg text-zinc-300 md:text-2xl mb-8 md:mb-12 max-w-2xl font-medium leading-relaxed">
             Eliminamos a burocracia do seu veículo e aceleramos sua carreira com cursos profissionalizantes 100% online.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center">
             <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl shadow-2xl shadow-primary/30 transition-all hover:scale-105 active:scale-95">
               <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 FALAR COM ESPECIALISTA
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-black font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105">
               <Link href="https://dsdespachanteguaruja.com.br" target="_blank">
                 <GraduationCap className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 VER CURSOS EAD
