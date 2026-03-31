@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "logo-ds",
-      "description": "Logotipo DS Despachante Guarujá - Silhueta preta",
-      "imageUrl": "https://picsum.photos/seed/ds-logo/200/200",
-      "imageHint": "logo brand"
+      "description": "Logotipo Oficial DS Despachante Guarujá",
+      "imageUrl": "https://picsum.photos/seed/ds-logo-black/400/400",
+      "imageHint": "company logo"
     },
     {
       "id": "hero-bg",

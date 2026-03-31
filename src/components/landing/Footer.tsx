@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MessageCircle, MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import { MessageCircle, MapPin, Phone, Instagram, Facebook } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
@@ -16,18 +16,20 @@ export function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               {logoImage && (
-                <div className="relative h-12 w-12 grayscale invert">
+                <div className="relative h-14 w-14 grayscale invert brightness-200">
                   <Image
                     src={logoImage.imageUrl}
-                    alt="DS Logo"
+                    alt="DS Despachante Logo"
                     fill
                     className="object-contain"
                   />
                 </div>
               )}
-              <span className="text-3xl font-black tracking-tighter">
-                DS <span className="text-primary italic text-4xl block text-sm tracking-widest not-italic">DESPACHANTE</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="text-3xl font-black tracking-tighter leading-none">
+                  DS <span className="text-primary italic block text-sm tracking-widest not-italic font-black">DESPACHANTE</span>
+                </span>
+              </div>
             </div>
             <p className="text-zinc-400 font-medium leading-relaxed">
               Simplificando a vida do motorista no Guarujá com agilidade, transparência e segurança em todos os processos.
@@ -59,9 +61,9 @@ export function Footer() {
             <ul className="space-y-6 text-zinc-300 font-bold text-sm">
               <li className="flex gap-4 items-start">
                 <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
-                <span>Alameda das Tulipas, 214 - Jardim Primavera<br />Guarujá - SP, 11432-250</span>
+                <span className="leading-relaxed">Alameda das Tulipas, 214 - Jardim Primavera<br />Guarujá - SP, 11432-250</span>
               </li>
-              <li className="flex gap-4 items-center text-primary font-black uppercase italic tracking-tighter text-lg">
+              <li className="flex gap-4 items-center text-primary font-black uppercase italic tracking-tighter text-xl">
                 <Phone className="h-6 w-6" />
                 <Link href={whatsappUrl} target="_blank" className="hover:underline">(13) 99193-2590</Link>
               </li>
@@ -89,7 +91,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-500 font-black uppercase tracking-[0.2em]">
+        <div className="border-t border-zinc-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-zinc-500 font-black uppercase tracking-[0.2em]">
           <p>© {new Date().getFullYear()} DS DESPACHANTE GUARUJÁ. CNPJ: 00.000.000/0001-00</p>
           <div className="flex gap-10 italic">
             <Link href="#" className="hover:text-primary transition-colors">Políticas</Link>

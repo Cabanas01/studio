@@ -29,23 +29,25 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-3">
               {logoImage && (
-                <div className="relative h-10 w-10 md:h-12 md:w-12">
+                <div className="relative h-12 w-12 md:h-14 md:w-14">
                   <Image
                     src={logoImage.imageUrl}
-                    alt="DS Logo"
+                    alt="DS Despachante Logo"
                     fill
                     className="object-contain"
-                    data-ai-hint="logo icon"
+                    priority
                   />
                 </div>
               )}
-              <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
-                DS <span className="text-primary uppercase block text-[10px] md:text-xs tracking-[0.2em]">Despachante</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
+                  DS <span className="text-primary uppercase block text-[10px] md:text-xs tracking-[0.2em] font-black">Despachante</span>
+                </span>
+              </div>
             </Link>
           </div>
 
-          <nav className="hidden xl:flex items-center gap-6 text-[11px] font-black uppercase tracking-[0.15em]">
+          <nav className="hidden xl:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.15em]">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
@@ -56,7 +58,7 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full px-6 shadow-lg shadow-primary/20">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-6 shadow-lg shadow-primary/20">
               <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 WhatsApp
@@ -83,7 +85,7 @@ export function Header() {
               href={link.href} 
               onClick={() => !link.external && setIsMenuOpen(false)}
               target={link.external ? "_blank" : "_self"}
-              className="text-xl font-bold uppercase tracking-tight"
+              className="text-xl font-black uppercase tracking-tight"
             >
               {link.name}
             </Link>
