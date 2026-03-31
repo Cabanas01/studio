@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Instagram, Facebook, Clock } from 'lucide-react';
+import { MapPin, Phone, Instagram, Facebook, Clock, MessageCircle } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
@@ -40,7 +40,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-zinc-400 text-sm font-medium leading-relaxed">
-              Simplificando a vida do motorista no Guarujá com agilidade, transparência e segurança absoluta.
+              Um dos maiores escritórios da Baixada Santista. Referência em regularização veicular e formação profissional.
             </p>
             <div className="flex gap-4">
               <Link href="https://instagram.com" target="_blank" className="bg-zinc-900 p-2.5 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all">
@@ -55,21 +55,25 @@ export function Footer() {
           <div>
             <h4 className="font-black uppercase tracking-widest text-primary text-xs mb-6 italic">Navegação</h4>
             <ul className="space-y-3 text-zinc-300 font-bold uppercase text-[10px] tracking-widest">
-              <li><Link href="#home" className="hover:text-primary transition-colors">Início</Link></li>
-              <li><Link href="#servicos" className="hover:text-primary transition-colors">Serviços</Link></li>
+              <li><Link href="#home" className="hover:text-primary transition-colors">Página Inicial</Link></li>
+              <li><Link href="#servicos" className="hover:text-primary transition-colors">Serviços Veiculares</Link></li>
+              <li><Link href="https://dsdespachanteguaruja.com.br" target="_blank" className="hover:text-primary transition-colors">Cursos EAD</Link></li>
               <li><Link href="#diferenciais" className="hover:text-primary transition-colors">Diferenciais</Link></li>
-              <li><Link href="#sobre" className="hover:text-primary transition-colors">Sobre Nós</Link></li>
-              <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
-              <li><Link href="https://dsdespachanteguaruja.com.br" target="_blank" className="hover:text-primary transition-colors">Cursos</Link></li>
+              <li><Link href="#sobre" className="hover:text-primary transition-colors">Sobre a Empresa</Link></li>
+              <li><Link href="#faq" className="hover:text-primary transition-colors">Dúvidas Frequentes</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-black uppercase tracking-widest text-primary text-xs mb-6 italic">Onde Estamos</h4>
+            <h4 className="font-black uppercase tracking-widest text-primary text-xs mb-6 italic">Endereço</h4>
             <ul className="space-y-5 text-zinc-300 font-bold text-xs">
               <li className="flex gap-3 items-start">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="leading-relaxed">Alameda das Tulipas, 214<br />Jardim Primavera, Guarujá - SP</span>
+                <span className="leading-relaxed">
+                  Avenida Alameda das Tulipas, 214<br />
+                  Jardim Primavera, Guarujá - SP<br />
+                  <span className="text-primary italic text-[9px] uppercase tracking-wider">(Em frente ao radar de 40 km/h)</span>
+                </span>
               </li>
               <li className="flex gap-3 items-center text-primary font-black uppercase italic tracking-tighter text-lg">
                 <Phone className="h-5 w-5" />
@@ -96,8 +100,8 @@ export function Footer() {
         <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-zinc-500 font-black uppercase tracking-[0.2em]">
           <p>© {year ? year : '2024'} DS DESPACHANTE GUARUJÁ. CNPJ: 00.000.000/0001-00</p>
           <div className="flex gap-6 italic">
-            <Link href="#" className="hover:text-primary transition-colors">Políticas</Link>
-            <Link href="#" className="hover:text-primary transition-colors">Termos</Link>
+            <Link href="#" className="hover:text-primary transition-colors">Transparência</Link>
+            <Link href="#" className="hover:text-primary transition-colors">LGPD</Link>
           </div>
         </div>
       </div>

@@ -1,20 +1,20 @@
 
 import React from 'react';
 import { 
-  ClipboardCheck, 
   FileText, 
   CarFront, 
   CreditCard, 
   ArrowRight, 
   AlertTriangle, 
   ShieldCheck, 
-  Anchor, 
   Target, 
-  UserCheck, 
   BadgePercent, 
   Search, 
   History,
-  Scale
+  Scale,
+  Truck,
+  GraduationCap,
+  Gavel
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -24,37 +24,30 @@ const serviceCategories = [
   {
     category: "Documentação Veicular",
     items: [
-      { title: 'Transferência', description: 'Compra e venda ou domicílio com agilidade.', icon: CarFront },
-      { title: '1º Emplacamento', description: 'Registro completo para veículos 0km.', icon: FileText },
-      { title: '2ª Via de Documentos', description: 'Solicitação rápida de CRV ou CRLV.', icon: CreditCard },
-      { title: 'Alteração de Dados', description: 'Mudança de cor, endereço ou características.', icon: History },
+      { title: 'Transferência', description: 'Compra e venda ou domicílio com agilidade total.', icon: CarFront },
+      { title: '1º Emplacamento', description: 'Registro completo para veículos 0km sem erros.', icon: FileText },
+      { title: '2ª Via de Documentos', description: 'CRV ou CRLV perdidos ou roubados resolvidos rápido.', icon: CreditCard },
+      { title: 'Alterações', description: 'Mudança de cor, motor, chassi ou características.', icon: History },
+      { title: 'Placa Mercosul', description: 'Adaptação imediata ao novo padrão obrigatório.', icon: BadgePercent },
+      { title: 'Comunicação de Venda', description: 'Isenção de responsabilidade sobre o veículo vendido.', icon: ShieldCheck },
     ]
   },
   {
-    category: "Multas e Débitos",
+    category: "Multas e Recursos",
     items: [
-      { title: 'Consulta de Débitos', description: 'Levantamento de IPVA, licenciamento e multas.', icon: Search },
-      { title: 'Recursos de Multas', description: 'Defesas fundamentadas para evitar penalizações.', icon: Scale },
-      { title: 'Parcelamento', description: 'Facilitamos o pagamento de todos os débitos.', icon: CreditCard },
-      { title: 'Regularização', description: 'Baixa de multas e resolução de restrições.', icon: AlertTriangle },
+      { title: 'Consulta de Débitos', description: 'Levantamento completo de IPVA, taxas e multas.', icon: Search },
+      { title: 'Recursos JARI/CETRAN', description: 'Defesas fundamentadas para evitar penalizações.', icon: Gavel },
+      { title: 'Parcelamento', description: 'Facilitamos o pagamento de todos os débitos em até 12x.', icon: CreditCard },
+      { title: 'Baixa de Multas', description: 'Resolução de multas indevidas e restrições legais.', icon: AlertTriangle },
     ]
   },
   {
-    category: "Habilitação (CNH)",
+    category: "Regularizações Avançadas",
     items: [
-      { title: 'Renovação de CNH', description: 'Processo simplificado para manter seu direito.', icon: UserCheck },
-      { title: 'Suspensão/Cassação', description: 'Assessoria em processos de suspensão de CNH.', icon: ShieldCheck },
-      { title: 'Reabilitação', description: 'Suporte para recuperar sua CNH com agilidade.', icon: History },
-      { title: 'Reciclagem', description: 'Orientação para condutores em reciclagem.', icon: ClipboardCheck },
-    ]
-  },
-  {
-    category: "Serviços Especiais",
-    items: [
-      { title: 'Despachante Náutico', description: 'Regularização para barcos e jet-skis.', icon: Anchor },
-      { title: 'Despachante Bélico', description: 'Assessoria em documentação de armas (CR).', icon: Target },
-      { title: 'Isenções PCD', description: 'Processo de isenção de impostos (IPI, ICMS).', icon: BadgePercent },
-      { title: 'Vistoria Veicular', description: 'Agendamento e acompanhamento legal.', icon: Search },
+      { title: 'Veículos Apreendidos', description: 'Liberação completa e regularização para retirada.', icon: Truck },
+      { title: 'Sinistrados', description: 'Regularização de veículos recuperados de média monta.', icon: ShieldCheck },
+      { title: 'Gravame', description: 'Inclusão ou baixa de alienação fiduciária.', icon: Scale },
+      { title: 'Vistoria', description: 'Agendamento e acompanhamento técnico especializado.', icon: Search },
     ]
   }
 ];
@@ -66,10 +59,10 @@ export function Services() {
     <section id="servicos" className="py-16 md:py-24 bg-zinc-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12 md:mb-16">
-          <span className="text-primary font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4 block">Portfólio Completo</span>
+          <span className="text-primary font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4 block">Portfólio Completo - Área 1</span>
           <h2 className="text-3xl font-black tracking-tighter text-foreground sm:text-5xl lg:text-6xl uppercase leading-[0.9]">
-            SOLUÇÕES ESPECIALIZADAS <br />
-            PARA <span className="text-primary italic">VOCÊ E SEU BEM</span>
+            ASSESSORIA VEICULAR <br />
+            <span className="text-primary italic">DE ALTA PERFORMANCE</span>
           </h2>
         </div>
 
@@ -79,7 +72,7 @@ export function Services() {
               <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight border-l-4 border-primary pl-4 italic">
                 {cat.category}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {cat.items.map((service, sIdx) => (
                   <Card key={sIdx} className="border-none shadow-premium bg-white hover:bg-zinc-950 transition-all duration-500 group relative overflow-hidden flex flex-col h-full">
                     <CardHeader className="p-5 md:p-6 pb-2 md:pb-4">
@@ -97,7 +90,7 @@ export function Services() {
                       <div className="mt-auto">
                         <Button asChild variant="link" className="p-0 h-auto text-[10px] md:text-xs font-black uppercase tracking-widest text-primary group-hover:text-white transition-colors">
                           <Link href={whatsappUrl} target="_blank">
-                            Solicitar Orçamento <ArrowRight className="ml-2 h-3 w-3" />
+                            SOLICITAR SERVIÇO <ArrowRight className="ml-2 h-3 w-3" />
                           </Link>
                         </Button>
                       </div>
@@ -109,12 +102,35 @@ export function Services() {
           ))}
         </div>
 
-        <div className="mt-16 md:mt-20 text-center">
-          <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-8 md:px-12 py-7 md:py-8 text-base md:text-xl shadow-2xl transition-all hover:scale-105 active:scale-95">
-            <Link href={whatsappUrl} target="_blank">
-              OUTRO SERVIÇO? FALE CONOSCO
-            </Link>
-          </Button>
+        {/* Highlight for EAD Area */}
+        <div id="cursos" className="mt-24 bg-zinc-950 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32" />
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-primary font-black uppercase tracking-widest text-sm mb-4 block italic">O Grande Diferencial - Área 2</span>
+              <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-6">
+                CAPACITAÇÃO <br />
+                PROFISSIONAL <br />
+                <span className="text-primary italic">100% ONLINE.</span>
+              </h2>
+              <p className="text-zinc-400 text-lg mb-8 font-medium">
+                Formação e atualização para MOPP, Coletivo, Emergência, Escolar, Carga Indivisível e normas NR. Estude de qualquer lugar com certificação válida.
+              </p>
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-10 py-8 text-xl">
+                <Link href="https://dsdespachanteguaruja.com.br" target="_blank">
+                  ACESSAR PORTAL DE CURSOS
+                </Link>
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {['MOPP', 'Escolar', 'Emergência', 'NR-35', 'Passageiros', 'Direção Defensiva'].map((item, i) => (
+                <div key={i} className="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl flex items-center gap-3">
+                  <GraduationCap className="h-5 w-5 text-primary" />
+                  <span className="text-white font-bold text-xs uppercase tracking-wider">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

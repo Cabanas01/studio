@@ -14,10 +14,10 @@ export function Header() {
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   const navLinks = [
-    { name: 'PÁGINA INICIAL', href: '#home' },
+    { name: 'INÍCIO', href: '#home' },
     { name: 'SERVIÇOS', href: '#servicos' },
+    { name: 'CURSOS EAD', href: 'https://dsdespachanteguaruja.com.br', external: true },
     { name: 'DIFERENCIAIS', href: '#diferenciais' },
-    { name: 'CURSOS', href: 'https://dsdespachanteguaruja.com.br', external: true },
     { name: 'SOBRE', href: '#sobre' },
     { name: 'FAQ', href: '#faq' },
     { name: 'CONTATO', href: '#contato' },
