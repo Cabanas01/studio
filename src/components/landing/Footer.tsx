@@ -21,7 +21,7 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {logoImage && (
                 <div className="relative h-14 w-14 grayscale invert brightness-200">
                   <Image
@@ -37,7 +37,7 @@ export function Footer() {
                 <span className="text-3xl font-black tracking-tighter text-white">
                   DS
                 </span>
-                <span className="text-primary uppercase text-[10px] tracking-[0.3em] font-black -mt-1">
+                <span className="text-primary uppercase text-[10px] tracking-[0.2em] font-black -mt-1">
                   DESPACHANTE
                 </span>
               </div>

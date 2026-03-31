@@ -13,7 +13,7 @@ export function Hero() {
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
-    <section id="home" className="relative w-full py-16 md:py-32 lg:py-48 overflow-hidden bg-zinc-950">
+    <section id="home" className="relative w-full py-20 md:py-32 lg:py-48 overflow-hidden bg-zinc-950">
       {heroImage && (
         <div className="absolute inset-0 z-0">
           <Image
@@ -21,11 +21,10 @@ export function Hero() {
             alt={heroImage.description}
             fill
             sizes="100vw"
-            className="object-cover opacity-80"
+            className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
       )}
       

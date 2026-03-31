@@ -28,7 +28,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-2">
               {logoImage && (
                 <div className="relative h-12 w-12">
                   <Image
@@ -45,7 +45,7 @@ export function Header() {
                 <span className="text-2xl md:text-3xl font-black tracking-tighter text-foreground">
                   DS
                 </span>
-                <span className="text-primary uppercase text-[8px] md:text-[10px] tracking-[0.3em] font-black -mt-1">
+                <span className="text-primary uppercase text-[8px] md:text-[10px] tracking-[0.2em] font-black -mt-1">
                   DESPACHANTE
                 </span>
               </div>
