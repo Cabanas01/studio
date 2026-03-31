@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Premium car driving on a coastal road at sunset",
+      "imageUrl": "https://picsum.photos/seed/despachante1/1920/1080",
+      "imageHint": "luxury car highway"
+    },
+    {
+      "id": "about-img",
+      "description": "Professional office environment with document folders",
+      "imageUrl": "https://picsum.photos/seed/despachante2/800/600",
+      "imageHint": "modern office paperwork"
+    },
+    {
+      "id": "service-licensing",
+      "description": "Close up of vehicle documentation",
+      "imageUrl": "https://picsum.photos/seed/despachante3/600/400",
+      "imageHint": "car documents"
+    },
+    {
+      "id": "service-transfer",
+      "description": "Handing over car keys",
+      "imageUrl": "https://picsum.photos/seed/despachante4/600/400",
+      "imageHint": "car keys exchange"
+    }
+  ]
 }
