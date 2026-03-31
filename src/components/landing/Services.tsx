@@ -9,7 +9,6 @@ import {
   ShieldCheck, 
   Search, 
   History,
-  Scale,
   Truck,
   GraduationCap,
   Gavel,

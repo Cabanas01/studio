@@ -3,20 +3,20 @@
     {
       "id": "logo-ds",
       "description": "Logotipo Oficial DS Despachante Guarujá",
-      "imageUrl": "https://picsum.photos/seed/ds-logo-black/400/400",
-      "imageHint": "company logo"
+      "imageUrl": "/images/logo.png",
+      "imageHint": "logo"
     },
     {
       "id": "hero-bg",
-      "description": "Imagem de fundo do topo - Carro Premium em rodovia",
-      "imageUrl": "https://picsum.photos/seed/despachante1/1920/1080",
-      "imageHint": "luxury car highway"
+      "description": "Imagem de fundo do Hero",
+      "imageUrl": "/images/hero.jpg",
+      "imageHint": "car"
     },
     {
       "id": "about-img",
-      "description": "Imagem da seção Sobre - Escritório profissional",
-      "imageUrl": "https://picsum.photos/seed/despachante2/800/600",
-      "imageHint": "modern office paperwork"
+      "description": "Imagem da seção Sobre",
+      "imageUrl": "/images/about.jpg",
+      "imageHint": "office"
     }
   ]
 }
