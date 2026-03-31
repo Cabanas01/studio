@@ -1,68 +1,76 @@
-
 import React from 'react';
-import { FileCheck, ArrowRightLeft, ShieldAlert, Banknote, MessageCircle } from 'lucide-react';
+import { ClipboardCheck, FileText, CarFront, CreditCard, MessageCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 
 const services = [
   {
-    title: 'Licenciamento Anual',
-    description: 'Renovamos o licenciamento do seu veículo de forma prática, sem filas e com entrega rápida.',
-    icon: FileCheck,
+    title: 'Licenciamento',
+    description: 'Renove o licenciamento do seu veículo de forma rápida e receba o documento digital no seu celular.',
+    icon: ClipboardCheck,
   },
   {
-    title: 'Transferência de Veículo',
-    description: 'Assessoria completa para transferência de propriedade, garantindo segurança jurídica no processo.',
-    icon: ArrowRightLeft,
+    title: 'Transferência',
+    description: 'Assessoria completa para transferência de propriedade ou de domicílio, sem dor de cabeça.',
+    icon: CarFront,
   },
   {
-    title: 'Regularização de Débitos',
-    description: 'Limpamos as pendências do seu carro. Multas, taxas e outras irregularidades resolvidas.',
-    icon: ShieldAlert,
+    title: 'Primeiro Registro',
+    description: 'Comprou um carro zero? Fazemos o primeiro emplacamento com agilidade e menor custo.',
+    icon: FileText,
   },
   {
-    title: 'IPVA e Multas',
-    description: 'Consulta e parcelamento de IPVA e multas em atraso com as melhores condições do mercado.',
-    icon: Banknote,
+    title: '2ª Via de Documentos',
+    description: 'Perdeu o CRV ou CRLV? Solicitamos a segunda via de forma rápida para você.',
+    icon: CreditCard,
   },
 ];
 
 export function Services() {
   return (
-    <section id="servicos" className="py-24 bg-white">
+    <section id="servicos" className="py-24 bg-zinc-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl mb-4">
-            Serviços <span className="text-primary">Essenciais</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Soluções completas para que você não precise se preocupar com a burocracia do DETRAN.
-          </p>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="max-w-2xl">
+            <span className="text-primary font-black uppercase tracking-[0.2em] text-sm mb-4 block">Nossos Serviços</span>
+            <h2 className="text-4xl font-black tracking-tighter text-foreground sm:text-5xl lg:text-6xl uppercase leading-[0.9]">
+              SOLUÇÕES COMPLETAS <br />
+              PARA O <span className="text-primary">SEU VEÍCULO</span>
+            </h2>
+          </div>
+          <Button asChild variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold rounded-xl px-8 uppercase italic tracking-wider">
+            <Link href="https://wa.me/5513999999999" target="_blank">
+              Ver todos os serviços <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="border-none shadow-premium bg-slate-50 hover:bg-white transition-all duration-300 hover:-translate-y-2 group">
-              <CardHeader>
-                <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-colors group-hover:bg-primary">
-                  <service.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground" />
+            <Card key={index} className="border-none shadow-xl bg-white hover:bg-zinc-950 transition-all duration-500 hover:-translate-y-3 group overflow-hidden">
+              <CardHeader className="relative z-10">
+                <div className="bg-primary w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-primary/20">
+                  <service.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                <CardTitle className="text-2xl font-black uppercase tracking-tight group-hover:text-white transition-colors leading-none">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+              <CardContent className="relative z-10">
+                <p className="text-zinc-500 text-sm font-medium group-hover:text-zinc-400 transition-colors mb-8 leading-relaxed">
                   {service.description}
                 </p>
+                <Link 
+                  href="https://wa.me/5513999999999" 
+                  target="_blank"
+                  className="inline-flex items-center text-xs font-black uppercase tracking-widest text-primary group-hover:text-white transition-colors"
+                >
+                  Saiba Mais <ArrowRight className="ml-2 h-3 w-3" />
+                </Link>
               </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full mt-4">
-                  <Link href="https://wa.me/5513999999999" target="_blank">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    Solicitar Orçamento
-                  </Link>
-                </Button>
-              </CardFooter>
+              {/* Decorative circle on hover */}
+              <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all" />
             </Card>
           ))}
         </div>
