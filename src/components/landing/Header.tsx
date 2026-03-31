@@ -1,7 +1,7 @@
 
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MessageCircle, Menu, X } from 'lucide-react';
@@ -9,17 +9,18 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ds');
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   const navLinks = [
-    { name: 'Página Inicial', href: '#home' },
-    { name: 'Serviços', href: '#servicos' },
-    { name: 'Cursos', href: 'https://dsdespachanteguaruja.com.br', external: true },
-    { name: 'Sobre', href: '#sobre' },
+    { name: 'PÁGINA INICIAL', href: '#home' },
+    { name: 'SERVIÇOS', href: '#servicos' },
+    { name: 'DIFERENCIAIS', href: '#diferenciais' },
+    { name: 'CURSOS', href: 'https://dsdespachanteguaruja.com.br', external: true },
+    { name: 'SOBRE', href: '#sobre' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'Contato', href: '#contato' },
+    { name: 'CONTATO', href: '#contato' },
   ];
 
   return (
@@ -27,14 +28,14 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-2">
               {logoImage && (
-                <div className="relative h-12 w-12 md:h-14 md:w-14">
+                <div className="relative h-10 w-10 md:h-12 md:w-12">
                   <Image
                     src={logoImage.imageUrl}
                     alt="DS Despachante Logo"
                     fill
-                    sizes="(max-width: 768px) 48px, 56px"
+                    sizes="(max-width: 768px) 40px, 48px"
                     className="object-contain"
                     priority
                   />
@@ -42,13 +43,13 @@ export function Header() {
               )}
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
-                  DS <span className="text-primary uppercase block text-[10px] md:text-xs tracking-[0.2em] font-black">Despachante</span>
+                  DS <span className="text-primary uppercase block text-[8px] md:text-[10px] tracking-[0.2em] font-black">Despachante</span>
                 </span>
               </div>
             </Link>
           </div>
 
-          <nav className="hidden xl:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.15em]">
+          <nav className="hidden xl:flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.15em]">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
@@ -59,10 +60,10 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-6 shadow-lg shadow-primary/20">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-5 h-9 text-[10px]">
               <Link href={whatsappUrl} target="_blank">
-                <MessageCircle className="mr-2 h-4 w-4" />
-                WhatsApp
+                <MessageCircle className="mr-2 h-3.5 w-3.5" />
+                WHATSAPP
               </Link>
             </Button>
           </nav>
@@ -72,27 +73,27 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {isMenuOpen && (
-        <div className="xl:hidden border-t bg-background p-6 flex flex-col gap-6 animate-in slide-in-from-top-4 duration-200">
+        <div className="xl:hidden border-t bg-background p-6 flex flex-col gap-5 animate-in slide-in-from-top-4 duration-200">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               href={link.href} 
               onClick={() => !link.external && setIsMenuOpen(false)}
               target={link.external ? "_blank" : "_self"}
-              className="text-xl font-black uppercase tracking-tight"
+              className="text-lg font-black uppercase tracking-tight hover:text-primary transition-colors"
             >
               {link.name}
             </Link>
           ))}
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full rounded-full py-7 text-lg">
+          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full rounded-full py-6 text-base">
             <Link href={whatsappUrl} target="_blank" onClick={() => setIsMenuOpen(false)}>
-              <MessageCircle className="mr-2 h-6 w-6" />
+              <MessageCircle className="mr-2 h-5 w-5" />
               Falar no WhatsApp
             </Link>
           </Button>
