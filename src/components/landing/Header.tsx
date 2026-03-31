@@ -28,9 +28,9 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-3">
               {logoImage && (
-                <div className="relative h-10 w-10 md:h-12 md:w-12">
+                <div className="relative h-12 w-12">
                   <Image
                     src={logoImage.imageUrl}
                     alt="DS Despachante Logo"
@@ -41,9 +41,12 @@ export function Header() {
                   />
                 </div>
               )}
-              <div className="flex items-baseline">
-                <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
-                  DS<span className="text-primary uppercase ml-0.5 text-xs md:text-sm tracking-widest font-black">DESPACHANTE</span>
+              <div className="flex flex-col leading-none">
+                <span className="text-2xl md:text-3xl font-black tracking-tighter text-foreground">
+                  DS
+                </span>
+                <span className="text-primary uppercase text-[8px] md:text-[10px] tracking-[0.3em] font-black -mt-1">
+                  DESPACHANTE
                 </span>
               </div>
             </Link>

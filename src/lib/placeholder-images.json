@@ -2,21 +2,21 @@
   "placeholderImages": [
     {
       "id": "logo-ds",
-      "description": "Logotipo Oficial - Salve como 'logo.png' em public/images/",
+      "description": "Logotipo Oficial - Coloque o arquivo 'logo.png' em public/images/",
       "imageUrl": "/images/logo.png",
       "imageHint": "logo"
     },
     {
       "id": "hero-bg",
-      "description": "Fundo do Topo (Hero) - Salve como 'hero.jpg' em public/images/",
+      "description": "Fundo do Topo (Hero) - Coloque o arquivo 'hero.jpg' em public/images/",
       "imageUrl": "/images/hero.jpg",
-      "imageHint": "car"
+      "imageHint": "car luxury"
     },
     {
       "id": "about-img",
-      "description": "Foto da Empresa - Salve como 'about.jpg' em public/images/",
+      "description": "Foto da Empresa - Coloque o arquivo 'about.jpg' em public/images/",
       "imageUrl": "/images/about.jpg",
-      "imageHint": "office"
+      "imageHint": "office building"
     }
   ]
 }

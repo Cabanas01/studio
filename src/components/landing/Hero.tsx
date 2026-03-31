@@ -21,10 +21,11 @@ export function Hero() {
             alt={heroImage.description}
             fill
             sizes="100vw"
-            className="object-cover opacity-60"
+            className="object-cover opacity-80"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/60 to-transparent" />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/40 to-transparent" />
         </div>
       )}
       
@@ -38,7 +39,7 @@ export function Hero() {
             VEICULAR E <br />
             <span className="text-primary italic">CURSOS EAD.</span>
           </h1>
-          <p className="text-lg text-zinc-200 md:text-2xl mb-8 md:mb-12 max-w-2xl font-medium leading-relaxed">
+          <p className="text-lg text-zinc-100 md:text-2xl mb-8 md:mb-12 max-w-2xl font-medium leading-relaxed">
             Eliminamos a burocracia do seu veículo e aceleramos sua carreira com cursos profissionalizantes 100% online.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center">
