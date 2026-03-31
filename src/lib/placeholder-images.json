@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "logo-ds",
+      "description": "Logotipo DS Despachante Guarujá",
+      "imageUrl": "https://picsum.photos/seed/ds-logo/200/200",
+      "imageHint": "logo brand"
+    },
+    {
       "id": "hero-bg",
       "description": "Premium car driving on a coastal road at sunset",
       "imageUrl": "https://picsum.photos/seed/despachante1/1920/1080",

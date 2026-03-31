@@ -1,12 +1,16 @@
+
 "use client";
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MessageCircle, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ds');
 
   const navLinks = [
     { name: 'Página Inicial', href: '#home' },
@@ -22,9 +26,20 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-black tracking-tighter text-foreground">
-                DS <span className="text-primary uppercase">Despachante</span>
+            <Link href="/" className="flex items-center gap-3">
+              {logoImage && (
+                <div className="relative h-10 w-10 md:h-12 md:w-12">
+                  <Image
+                    src={logoImage.imageUrl}
+                    alt="DS Logo"
+                    fill
+                    className="object-contain"
+                    data-ai-hint="logo icon"
+                  />
+                </div>
+              )}
+              <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground leading-none">
+                DS <span className="text-primary uppercase block text-[10px] md:text-xs tracking-[0.2em]">Despachante</span>
               </span>
             </Link>
           </div>

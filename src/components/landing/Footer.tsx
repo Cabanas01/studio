@@ -1,17 +1,33 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MessageCircle, MapPin, Phone, Clock, Instagram, Facebook } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
+  const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ds');
+
   return (
     <footer id="contato" className="bg-zinc-950 text-white pt-24 pb-12 border-t-4 border-primary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           <div className="space-y-6">
-            <span className="text-3xl font-black tracking-tighter">
-              DS <span className="text-primary italic text-4xl">DESPACHANTE</span>
-            </span>
+            <div className="flex items-center gap-3">
+              {logoImage && (
+                <div className="relative h-12 w-12 grayscale invert">
+                  <Image
+                    src={logoImage.imageUrl}
+                    alt="DS Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              )}
+              <span className="text-3xl font-black tracking-tighter">
+                DS <span className="text-primary italic text-4xl block text-sm tracking-widest not-italic">DESPACHANTE</span>
+              </span>
+            </div>
             <p className="text-zinc-400 font-medium leading-relaxed">
               Simplificando a vida do motorista no Guarujá com agilidade, transparência e segurança em todos os processos.
             </p>
