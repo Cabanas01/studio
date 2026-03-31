@@ -12,7 +12,10 @@ import {
   Scale,
   Truck,
   GraduationCap,
-  Gavel
+  Gavel,
+  Anchor,
+  Crosshair,
+  Award
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -22,10 +25,10 @@ const serviceCategories = [
   {
     category: "Documentação Veicular",
     items: [
-      { title: 'Transferência', description: 'Compra e venda ou domicílio com agilidade total.', icon: CarFront },
-      { title: '1º Emplacamento', description: 'Registro completo para veículos 0km sem erros.', icon: FileText },
-      { title: '2ª Via de Documentos', description: 'CRV ou CRLV perdidos ou roubados resolvidos rápido.', icon: CreditCard },
-      { title: 'Alterações', description: 'Mudança de cor, motor, chassi ou características.', icon: History },
+      { title: 'Transferência', description: 'Transferência de propriedade com agilidade total.', icon: CarFront },
+      { title: 'Primeiro Emplacamento', description: 'Registro completo para veículos 0km sem erros.', icon: FileText },
+      { title: 'Segunda Via', description: 'CRV ou CRLV perdidos ou roubados resolvidos rápido.', icon: CreditCard },
+      { title: 'Alterações', description: 'Mudança de cor, motor ou características cadastrais.', icon: History },
       { title: 'Placa Mercosul', description: 'Adaptação imediata ao novo padrão obrigatório.', icon: ShieldCheck },
       { title: 'Comunicação de Venda', description: 'Isenção de responsabilidade sobre o veículo vendido.', icon: ShieldCheck },
     ]
@@ -35,17 +38,17 @@ const serviceCategories = [
     items: [
       { title: 'Consulta de Débitos', description: 'Levantamento completo de IPVA, taxas e multas.', icon: Search },
       { title: 'Recursos JARI/CETRAN', description: 'Defesas fundamentadas para evitar penalizações.', icon: Gavel },
-      { title: 'Parcelamento', description: 'Facilitamos o pagamento de todos os débitos em até 12x.', icon: CreditCard },
-      { title: 'Baixa de Multas', description: 'Resolução de multas indevidas e restrições legais.', icon: AlertTriangle },
+      { title: 'Parcelamento', description: 'Facilitamos o pagamento de débitos em até 12x no cartão.', icon: CreditCard },
+      { title: 'Baixa de Multas', description: 'Resolução de multas indevidas e restrições.', icon: AlertTriangle },
     ]
   },
   {
-    category: "Regularizações Avançadas",
+    category: "Serviços Especiais",
     items: [
+      { title: 'Despachante Náutico', description: 'Documentação completa para barcos e jet-skis.', icon: Anchor },
+      { title: 'Despachante Bélico', description: 'Assessoria para regularização de CR e armas.', icon: Crosshair },
+      { title: 'Isenções PCD', description: 'Assessoria em isenções para compra de veículos.', icon: Award },
       { title: 'Veículos Apreendidos', description: 'Liberação completa e regularização para retirada.', icon: Truck },
-      { title: 'Sinistrados', description: 'Regularização de veículos recuperados de média monta.', icon: ShieldCheck },
-      { title: 'Gravame', description: 'Inclusão ou baixa de alienação fiduciária.', icon: Scale },
-      { title: 'Vistoria', description: 'Agendamento e acompanhamento técnico especializado.', icon: Search },
     ]
   }
 ];
@@ -87,7 +90,7 @@ export function Services() {
                       <div className="mt-auto">
                         <Button asChild variant="link" className="p-0 h-auto text-[10px] md:text-xs font-black uppercase tracking-widest text-primary group-hover:text-white transition-colors">
                           <Link href={whatsappUrl} target="_blank">
-                            SOLICITAR SERVIÇO <ArrowRight className="ml-2 h-3 w-3" />
+                            SOLICITAR ORÇAMENTO <ArrowRight className="ml-2 h-3 w-3" />
                           </Link>
                         </Button>
                       </div>
@@ -99,7 +102,6 @@ export function Services() {
           ))}
         </div>
 
-        {/* Highlight for EAD Area */}
         <div id="cursos" className="mt-24 bg-zinc-950 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -110,7 +112,7 @@ export function Services() {
                 <span className="text-primary italic">100% ONLINE.</span>
               </h2>
               <p className="text-zinc-400 text-lg mb-8 font-medium">
-                Formação e atualização para MOPP, Coletivo, Emergência, Escolar, Carga Indivisível e normas NR. Estude de qualquer lugar com certificação válida.
+                Formação e atualização para motoristas profissionais. Estude de qualquer lugar com certificação válida.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-10 py-8 text-xl shadow-xl shadow-primary/20">
                 <Link href="https://dsdespachanteguaruja.com.br" target="_blank">

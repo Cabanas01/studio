@@ -47,7 +47,7 @@ export function Hero() {
                 FALAR COM ESPECIALISTA
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-transparent hover:text-primary font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105">
               <Link href="https://dsdespachanteguaruja.com.br" target="_blank">
                 <GraduationCap className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 VER CURSOS EAD
