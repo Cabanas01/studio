@@ -7,8 +7,6 @@ import {
   ArrowRight, 
   AlertTriangle, 
   ShieldCheck, 
-  Target, 
-  BadgePercent, 
   Search, 
   History,
   Scale,
@@ -28,7 +26,7 @@ const serviceCategories = [
       { title: '1º Emplacamento', description: 'Registro completo para veículos 0km sem erros.', icon: FileText },
       { title: '2ª Via de Documentos', description: 'CRV ou CRLV perdidos ou roubados resolvidos rápido.', icon: CreditCard },
       { title: 'Alterações', description: 'Mudança de cor, motor, chassi ou características.', icon: History },
-      { title: 'Placa Mercosul', description: 'Adaptação imediata ao novo padrão obrigatório.', icon: BadgePercent },
+      { title: 'Placa Mercosul', description: 'Adaptação imediata ao novo padrão obrigatório.', icon: ShieldCheck },
       { title: 'Comunicação de Venda', description: 'Isenção de responsabilidade sobre o veículo vendido.', icon: ShieldCheck },
     ]
   },
@@ -59,7 +57,6 @@ export function Services() {
     <section id="servicos" className="py-16 md:py-24 bg-zinc-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-12 md:mb-16">
-          <span className="text-primary font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4 block">Portfólio Completo</span>
           <h2 className="text-3xl font-black tracking-tighter text-foreground sm:text-5xl lg:text-6xl uppercase leading-[0.9]">
             ASSESSORIA VEICULAR <br />
             <span className="text-primary italic">DE ALTA PERFORMANCE</span>
@@ -107,7 +104,6 @@ export function Services() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-primary font-black uppercase tracking-widest text-sm mb-4 block italic">O Grande Diferencial</span>
               <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-6">
                 CAPACITAÇÃO <br />
                 PROFISSIONAL <br />

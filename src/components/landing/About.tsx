@@ -31,7 +31,6 @@ export function About() {
           </div>
           
           <div className="order-1 lg:order-2">
-            <span className="text-primary font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4 block">Institucional</span>
             <h2 className="text-4xl font-black tracking-tighter text-foreground sm:text-5xl lg:text-7xl mb-8 uppercase leading-[0.9]">
               AUTORIDADE EM <br />
               <span className="text-primary italic">RESOLUÇÃO.</span>
