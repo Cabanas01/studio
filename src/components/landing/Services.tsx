@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   ClipboardCheck, 
@@ -59,7 +60,7 @@ const serviceCategories = [
 ];
 
 export function Services() {
-  const whatsappUrl = "https://wa.me/5513999999999";
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
     <section id="servicos" className="py-16 md:py-24 bg-zinc-50">

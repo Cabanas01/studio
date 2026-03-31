@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,6 +8,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-bg');
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
     <section className="relative w-full py-16 md:py-32 lg:py-40 overflow-hidden bg-zinc-950">
@@ -39,7 +41,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
             <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl shadow-2xl shadow-primary/30 transition-all hover:scale-105 active:scale-95">
-              <Link href="https://wa.me/5513999999999" target="_blank">
+              <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 COMEÇAR AGORA
               </Link>

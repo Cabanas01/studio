@@ -5,6 +5,8 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function CTASection() {
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +22,7 @@ export function CTASection() {
               Não perca tempo em filas ou tentando entender burocracias. Clique no botão abaixo e fale diretamente com quem resolve.
             </p>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xl px-12 py-8 rounded-full shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95">
-              <Link href="https://wa.me/5513999999999" target="_blank">
+              <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-3 h-8 w-8" />
                 Falar no WhatsApp
               </Link>

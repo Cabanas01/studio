@@ -11,11 +11,12 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ds');
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   const navLinks = [
     { name: 'Página Inicial', href: '#home' },
     { name: 'Serviços', href: '#servicos' },
-    { name: 'Cursos', href: 'https://dsdespachanteguaruja.com/cursos', external: true },
+    { name: 'Cursos', href: 'https://dsdespachanteguaruja.com.br', external: true },
     { name: 'Sobre', href: '#sobre' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contato', href: '#contato' },
@@ -56,7 +57,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-full px-6 shadow-lg shadow-primary/20">
-              <Link href="https://wa.me/5513999999999" target="_blank">
+              <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 WhatsApp
               </Link>
@@ -88,7 +89,7 @@ export function Header() {
             </Link>
           ))}
           <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full rounded-full py-7 text-lg">
-            <Link href="https://wa.me/5513999999999" target="_blank" onClick={() => setIsMenuOpen(false)}>
+            <Link href={whatsappUrl} target="_blank" onClick={() => setIsMenuOpen(false)}>
               <MessageCircle className="mr-2 h-6 w-6" />
               Falar no WhatsApp
             </Link>

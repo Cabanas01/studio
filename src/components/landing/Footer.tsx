@@ -7,6 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
   const logoImage = PlaceHolderImages.find(img => img.id === 'logo-ds');
+  const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
     <footer id="contato" className="bg-zinc-950 text-white pt-24 pb-12 border-t-4 border-primary">
@@ -58,11 +59,11 @@ export function Footer() {
             <ul className="space-y-6 text-zinc-300 font-bold text-sm">
               <li className="flex gap-4 items-start">
                 <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
-                <span>Rua Mario Ribeiro, 123 - Centro<br />Guarujá - SP, 11410-001</span>
+                <span>Alameda das Tulipas, 214 - Jardim Primavera<br />Guarujá - SP, 11432-250</span>
               </li>
               <li className="flex gap-4 items-center text-primary font-black uppercase italic tracking-tighter text-lg">
                 <Phone className="h-6 w-6" />
-                <span>(13) 99999-9999</span>
+                <Link href={whatsappUrl} target="_blank" className="hover:underline">(13) 99193-2590</Link>
               </li>
             </ul>
           </div>
@@ -72,16 +73,16 @@ export function Footer() {
             <ul className="space-y-4 text-zinc-300 font-bold uppercase text-xs tracking-widest">
               <li className="flex flex-col">
                 <span className="text-zinc-500 mb-1">Segunda a Sexta</span>
-                <span>08:30 às 18:00</span>
+                <span>08:00 às 19:00</span>
               </li>
               <li className="flex flex-col">
                 <span className="text-zinc-500 mb-1">Sábados</span>
-                <span>09:00 às 13:00</span>
+                <span>09:00 às 15:00</span>
               </li>
               <li className="pt-4">
                 <span className="text-primary animate-pulse flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full" />
-                  Atendimento Digital 24h
+                  Atendimento Digital Ativo
                 </span>
               </li>
             </ul>
