@@ -1,9 +1,14 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'DS Despachante Guarujá | Documentação Veicular Sem Complicação',
   description: 'Licenciamento, Transferência, Primeiro Registro e Segunda Via. Resolvemos toda a burocracia do seu veículo no Guarujá.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
