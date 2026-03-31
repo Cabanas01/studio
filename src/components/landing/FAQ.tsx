@@ -29,32 +29,32 @@ const faqs = [
   },
   {
     question: "Como faço para recuperar uma CNH suspensa?",
-    answer: "O processo envolve a entrega da CNH (se física), cumprimento do prazo de suspensão e realização do curso de reciclagem. Nós oferecemos assessoria completa para garantir que você recupere seu direito de dirigir o quanto antes."
+    answer: "O processo envolve a entrega da CNH (se física), cumprimento do prazo de suspensão e realização do curso de reciclagem. Nós oferecemos assessoria completa para garantir que você recupere seu direito de dirigir."
   }
 ];
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-black uppercase tracking-[0.2em] text-sm mb-4 block">Dúvidas Frequentes</span>
-          <h2 className="text-4xl font-black tracking-tighter text-foreground sm:text-5xl uppercase leading-[0.9] mb-6">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+          <span className="text-primary font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4 block">Dúvidas Frequentes</span>
+          <h2 className="text-3xl font-black tracking-tighter text-foreground sm:text-5xl uppercase leading-[0.9] mb-4 md:mb-6">
             Tire suas <span className="text-primary italic">Dúvidas</span>
           </h2>
-          <p className="text-zinc-600 font-medium">
+          <p className="text-sm md:text-base text-zinc-600 font-medium px-4">
             Confira as perguntas mais comuns dos nossos clientes. Se não encontrar o que procura, nos chame no WhatsApp.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border rounded-2xl px-6 bg-zinc-50/50">
-                <AccordionTrigger className="text-left font-bold text-lg hover:no-underline hover:text-primary transition-colors py-6">
+              <AccordionItem key={index} value={`item-${index}`} className="border rounded-xl md:rounded-2xl px-4 md:px-6 bg-zinc-50/50">
+                <AccordionTrigger className="text-left font-bold text-base md:text-lg hover:no-underline hover:text-primary transition-colors py-4 md:py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-zinc-600 font-medium text-base pb-6">
+                <AccordionContent className="text-zinc-600 font-medium text-sm md:text-base pb-4 md:pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
