@@ -38,12 +38,12 @@ export function Header() {
                 key={link.name} 
                 href={link.href} 
                 target={link.external ? "_blank" : "_self"}
-                className="text-[18px] font-black uppercase tracking-wider transition-colors hover:text-primary whitespace-nowrap py-2"
+                className="text-[22px] font-black uppercase tracking-wider transition-colors hover:text-primary whitespace-nowrap py-2"
               >
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-10 h-16 text-lg shadow-lg shadow-primary/20">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-10 h-16 text-xl shadow-lg shadow-primary/20">
               <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-2 h-7 w-7" />
                 WHATSAPP
