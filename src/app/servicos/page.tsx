@@ -104,11 +104,11 @@ export default function ServicesPage() {
         <section className="bg-zinc-950 py-24 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-6">
-              PORTFÓLIO <br />
-              <span className="text-primary italic">COMPLETO DE SERVIÇOS</span>
+              RESOLVA SEU DOCUMENTO <br />
+              <span className="text-primary italic">SEM DOR DE CABEÇA</span>
             </h1>
             <p className="text-zinc-400 text-xl max-w-2xl font-medium">
-              Gestão integral de processos veiculares e habilitação. Resolvemos a burocracia para você focar no que importa.
+              Nós cuidamos da burocracia enquanto você ganha tempo e tranquilidade.
             </p>
           </div>
         </section>
