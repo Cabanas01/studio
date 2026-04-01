@@ -33,11 +33,11 @@ export function Footer() {
                   />
                 </div>
               )}
-              <div className="flex flex-col leading-none">
+              <div className="flex flex-col leading-[0.8]">
                 <span className="text-3xl font-black tracking-tighter text-white">
                   DS
                 </span>
-                <span className="text-primary uppercase text-[10px] tracking-[0.2em] font-black -mt-1">
+                <span className="text-primary uppercase text-[10px] tracking-[0.2em] font-black">
                   DESPACHANTE
                 </span>
               </div>

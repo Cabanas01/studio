@@ -16,8 +16,8 @@ export function Header() {
   const navLinks = [
     { name: 'INÍCIO', href: '#home' },
     { name: 'SERVIÇOS', href: '#servicos' },
-    { name: 'CURSOS EAD', href: 'https://dsdespachanteguaruja.com.br', external: true },
     { name: 'DIFERENCIAIS', href: '#diferenciais' },
+    { name: 'CURSOS EAD', href: 'https://dsdespachanteguaruja.com.br', external: true },
     { name: 'SOBRE', href: '#sobre' },
     { name: 'FAQ', href: '#faq' },
     { name: 'CONTATO', href: '#contato' },
@@ -26,26 +26,26 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 group">
               {logoImage && (
-                <div className="relative h-12 w-12">
+                <div className="relative h-14 w-14 transition-transform group-hover:scale-105">
                   <Image
                     src={logoImage.imageUrl}
                     alt="DS Despachante Logo"
                     fill
-                    sizes="48px"
+                    sizes="56px"
                     className="object-contain"
                     priority
                   />
                 </div>
               )}
-              <div className="flex flex-col leading-none">
-                <span className="text-2xl md:text-3xl font-black tracking-tighter text-foreground">
+              <div className="flex flex-col leading-[0.8]">
+                <span className="text-3xl md:text-4xl font-black tracking-tighter text-foreground">
                   DS
                 </span>
-                <span className="text-primary uppercase text-[8px] md:text-[10px] tracking-[0.2em] font-black -mt-1">
+                <span className="text-primary uppercase text-[9px] md:text-[11px] tracking-[0.25em] font-black">
                   DESPACHANTE
                 </span>
               </div>
@@ -63,9 +63,9 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-5 h-9 text-[10px]">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-full px-5 h-10 text-[10px] shadow-lg shadow-primary/20">
               <Link href={whatsappUrl} target="_blank">
-                <MessageCircle className="mr-2 h-3.5 w-3.5" />
+                <MessageCircle className="mr-2 h-4 w-4" />
                 WHATSAPP
               </Link>
             </Button>
@@ -76,7 +76,7 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
@@ -89,14 +89,14 @@ export function Header() {
               href={link.href} 
               onClick={() => !link.external && setIsMenuOpen(false)}
               target={link.external ? "_blank" : "_self"}
-              className="text-lg font-black uppercase tracking-tight hover:text-primary transition-colors"
+              className="text-xl font-black uppercase tracking-tight hover:text-primary transition-colors"
             >
               {link.name}
             </Link>
           ))}
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full rounded-full py-6 text-base">
+          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full rounded-full py-7 text-lg">
             <Link href={whatsappUrl} target="_blank" onClick={() => setIsMenuOpen(false)}>
-              <MessageCircle className="mr-2 h-5 w-5" />
+              <MessageCircle className="mr-2 h-6 w-6" />
               Falar no WhatsApp
             </Link>
           </Button>

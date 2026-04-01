@@ -13,7 +13,7 @@ export function Hero() {
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
-    <section id="home" className="relative w-full py-20 md:py-32 lg:py-48 overflow-hidden bg-zinc-950">
+    <section id="home" className="relative w-full min-h-[85vh] flex items-center py-20 overflow-hidden bg-zinc-950">
       {heroImage && (
         <div className="absolute inset-0 z-0">
           <Image
@@ -21,10 +21,10 @@ export function Hero() {
             alt={heroImage.description}
             fill
             sizes="100vw"
-            className="object-cover opacity-70"
+            className="object-cover opacity-90"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
         </div>
       )}
       
@@ -42,13 +42,13 @@ export function Hero() {
             Eliminamos a burocracia do seu veículo e aceleramos sua carreira com cursos profissionalizantes 100% online.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-start sm:items-center">
-            <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl shadow-2xl shadow-primary/30 transition-all hover:scale-105 active:scale-95">
+            <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95">
               <Link href={whatsappUrl} target="_blank">
                 <MessageCircle className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 FALAR COM ESPECIALISTA
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105 bg-transparent">
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-black rounded-xl px-8 md:px-10 py-7 md:py-8 text-lg md:text-xl transition-all hover:scale-105 bg-transparent backdrop-blur-sm">
               <Link href="https://dsdespachanteguaruja.com.br" target="_blank">
                 <GraduationCap className="mr-3 h-6 w-6 md:h-7 md:w-7" />
                 VER CURSOS EAD
