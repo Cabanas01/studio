@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Accordion,
@@ -35,26 +36,26 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-16 md:py-24 bg-white">
+    <section id="faq" className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
-          <span className="text-primary font-black uppercase tracking-[0.2em] text-xs md:text-sm mb-4 block">Dúvidas Frequentes</span>
-          <h2 className="text-3xl font-black tracking-tighter text-foreground sm:text-5xl uppercase leading-[0.9] mb-4 md:mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
+          <span className="text-primary font-black uppercase tracking-[0.2em] text-sm md:text-base mb-6 block">Dúvidas Frequentes</span>
+          <h2 className="text-4xl font-black tracking-tighter text-foreground sm:text-6xl uppercase leading-[0.9] mb-8 md:mb-10">
             Tire suas <span className="text-primary italic">Dúvidas</span>
           </h2>
-          <p className="text-sm md:text-base text-zinc-600 font-medium px-4">
+          <p className="text-lg md:text-2xl text-zinc-600 font-medium px-4 leading-relaxed">
             Confira as perguntas mais comuns dos nossos clientes. Se não encontrar o que procura, nos chame no WhatsApp.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-3 md:space-y-4">
+        <div className="max-w-5xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-6 md:space-y-8">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border rounded-xl md:rounded-2xl px-4 md:px-6 bg-zinc-50/50">
-                <AccordionTrigger className="text-left font-bold text-base md:text-lg hover:no-underline hover:text-primary transition-colors py-4 md:py-6">
+              <AccordionItem key={index} value={`item-${index}`} className="border-2 rounded-[1.5rem] md:rounded-[2rem] px-6 md:px-10 bg-zinc-50/50 hover:bg-zinc-50 transition-colors">
+                <AccordionTrigger className="text-left font-bold text-xl md:text-2xl hover:no-underline hover:text-primary transition-all py-8 md:py-10">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-zinc-600 font-medium text-sm md:text-base pb-4 md:pb-6">
+                <AccordionContent className="text-zinc-600 font-medium text-lg md:text-xl pb-8 md:pb-10 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

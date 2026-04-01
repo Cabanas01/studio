@@ -103,11 +103,11 @@ export default function ServicesPage() {
       <main className="flex-grow pt-20">
         <section className="bg-zinc-950 py-24 text-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[1.1] mb-8">
               RESOLVA SEU DOCUMENTO <br />
               <span className="text-primary italic">SEM DOR DE CABEÇA</span>
             </h1>
-            <p className="text-zinc-400 text-xl max-w-2xl font-medium">
+            <p className="text-zinc-400 text-xl md:text-2xl max-w-3xl font-medium leading-relaxed">
               Nós cuidamos da burocracia enquanto você ganha tempo e tranquilidade.
             </p>
           </div>
@@ -119,26 +119,26 @@ export default function ServicesPage() {
               {allServiceCategories.map((cat, idx) => (
                 <div key={idx} className="space-y-10">
                   <div className="flex items-center gap-4 border-b-4 border-primary pb-4">
-                    <cat.icon className="h-8 w-8 text-primary" />
-                    <h2 className="text-3xl font-black uppercase tracking-tight italic">
+                    <cat.icon className="h-10 w-10 text-primary" />
+                    <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight italic">
                       {cat.category}
                     </h2>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {cat.items.map((service, sIdx) => (
                       <Card key={sIdx} className="border-none shadow-sm bg-white hover:shadow-xl transition-all duration-300">
-                        <CardHeader className="p-6 pb-2">
-                          <CardTitle className="text-lg font-black uppercase tracking-tight">
+                        <CardHeader className="p-8 pb-4">
+                          <CardTitle className="text-xl md:text-2xl font-black uppercase tracking-tight leading-tight">
                             {service.title}
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 pt-0">
-                          <p className="text-zinc-500 text-sm font-medium mb-6">
+                        <CardContent className="p-8 pt-0">
+                          <p className="text-zinc-600 text-base md:text-lg font-medium mb-8 leading-relaxed">
                             {service.description}
                           </p>
-                          <Button asChild variant="link" className="p-0 h-auto text-[10px] font-black uppercase tracking-widest text-primary">
+                          <Button asChild variant="link" className="p-0 h-auto text-sm font-black uppercase tracking-widest text-primary">
                             <Link href={whatsappUrl} target="_blank">
-                              SOLICITAR <ArrowRight className="ml-2 h-3 w-3" />
+                              SOLICITAR <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                           </Button>
                         </CardContent>
