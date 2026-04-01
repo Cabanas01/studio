@@ -14,27 +14,31 @@ const featuredServices = [
   { 
     title: 'Transferência de Veículo', 
     description: 'Processo completo de compra e venda com agilidade e segurança.',
-    icon: CarFront 
+    icon: CarFront,
+    whatsappUrl: 'https://wa.me/5513991932590?text=Olá,%20quero%20transferir%20meu%20veículo.%20Pode%20me%20passar%20valor?'
   },
   { 
     title: 'Licenciamento Anual', 
     description: 'Regularização obrigatória sem complicação e sem filas.',
-    icon: CheckCircle2 
+    icon: CheckCircle2,
+    whatsappUrl: 'https://wa.me/5513991932590?text=Olá,%20quero%20licenciar%20meu%20veículo.%20Pode%20verificar%20valor?'
   },
   { 
     title: 'Renovação de CNH', 
     description: 'Processo ágil para manter seu direito de dirigir sempre em dia.',
-    icon: IdCard 
+    icon: IdCard,
+    whatsappUrl: 'https://wa.me/5513991932590?text=Olá,%20quero%20renovar%20minha%20CNH.%20Valor?'
   },
   { 
     title: 'Recursos de Multas', 
     description: 'Defesa técnica especializada em todas as instâncias (JARI/CETRAN).',
-    icon: Gavel 
+    icon: Gavel,
+    whatsappUrl: 'https://wa.me/5513991932590?text=Olá,%20quero%20recorrer%20uma%20multa'
   },
 ];
 
 export function Services() {
-  const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
+  const globalWhatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   return (
     <section id="servicos" className="py-24 bg-zinc-50">
@@ -70,7 +74,7 @@ export function Services() {
                   {service.description}
                 </p>
                 <Button asChild variant="link" className="p-0 h-auto text-sm font-black uppercase tracking-widest text-primary group-hover:text-white">
-                  <Link href={whatsappUrl} target="_blank">
+                  <Link href={service.whatsappUrl || globalWhatsappUrl} target="_blank">
                     SOLICITAR AGORA <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
