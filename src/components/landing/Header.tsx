@@ -14,13 +14,13 @@ export function Header() {
   const whatsappUrl = "https://api.whatsapp.com/send?phone=5513991932590&text=Oie%2C%20vim%20pelo%20site!";
 
   const navLinks = [
-    { name: 'INÍCIO', href: '#home' },
-    { name: 'SERVIÇOS', href: '#servicos' },
-    { name: 'DIFERENCIAIS', href: '#diferenciais' },
+    { name: 'INÍCIO', href: '/' },
+    { name: 'SERVIÇOS', href: '/servicos' },
+    { name: 'DIFERENCIAIS', href: '/#diferenciais' },
     { name: 'CURSOS EAD', href: 'https://dsdespachanteguaruja.com.br', external: true },
-    { name: 'SOBRE', href: '#sobre' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'CONTATO', href: '#contato' },
+    { name: 'SOBRE', href: '/#sobre' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'CONTATO', href: '/#contato' },
   ];
 
   return (
@@ -29,19 +29,7 @@ export function Header() {
         <div className="flex h-24 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2 group">
-              {logoImage && (
-                <div className="relative h-14 w-14 transition-transform group-hover:scale-105">
-                  <Image
-                    src={logoImage.imageUrl}
-                    alt="DS Despachante Logo"
-                    fill
-                    sizes="56px"
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              )}
-              <div className="flex flex-col leading-[0.8]">
+              <div className="flex flex-col items-center leading-[0.8]">
                 <span className="text-3xl md:text-4xl font-black tracking-tighter text-foreground">
                   DS
                 </span>
